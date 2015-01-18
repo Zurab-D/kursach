@@ -7,7 +7,6 @@
         rowAddress = document.getElementsByClassName('data-address'),
         names = JSON.parse(localStorage.names),
         addresses = JSON.parse(localStorage.addresses);
-
       for (var i = 0, x = rowName.length; i<x ; i++) {
         rowName[i].textContent = names[rowName[i].textContent.match(/\d+$/)[0]];
         rowAddress[i].textContent = addresses[rowAddress[i].textContent.match(/\d+$/)[0]];
@@ -41,7 +40,7 @@
           newAddress = document.getElementById('formAddress').value;
 
       nameId = localStorage.nameId || 1;      
-      addressId = localStorage.addressId || 1;
+      addressId = localStorage.addressId || 10000;
 
       if (typeof localStorage.hiddenRecords !== 'undefined') {
         hiddenRecords = JSON.parse(localStorage.hiddenRecords);
