@@ -72,8 +72,8 @@
       console.log(hiddenRecords.length);
 
       document.getElementById("add-form").reset();
-      $('#close-form').trigger( "click" );
-      $('#load-data').trigger( "click" );
+      $('#close-form').trigger('click');
+      this.getRealData();
     };
   });
 
