@@ -1,11 +1,11 @@
 <h2>Добавление записи</h2>
-<form ng-controller="DataController as data">
+<form id="add-form" ng-controller="DataController as data">
   <div class="row collapse">
     <div class="small-3 large-2 columns">
       <span class="prefix">Имя</span>
     </div>
     <div class="small-9 large-10 columns">
-      <input type="text" placeholder="Иванов Иван Алекеевич" id="formName">
+      <input type="text" placeholder="Иванов Иван Алекеевич" id="formName" required>
     </div>  
   </div>
 
@@ -14,7 +14,7 @@
       <span class="prefix">Год рождения</span>
     </div>
     <div class="small-9 large-10 columns">
-      <input type="text" placeholder="1988" id="formYear">
+      <input type="text" placeholder="1988" id="formYear" required>
     </div>  
   </div>
 
@@ -23,7 +23,7 @@
       <span class="prefix">Пол</span>
     </div>
     <div class="small-9 large-10 columns">
-      <input type="text" placeholder="М" id="formSex">
+      <input type="text" placeholder="М" id="formSex" required>
     </div>  
   </div>
 
@@ -32,11 +32,11 @@
       <span class="prefix">Адрес регистрации</span>
     </div>
     <div class="small-9 large-10 columns">
-      <input type="text" placeholder="Россия, г. Москва, ул. Пушкина, д. 137" id="formAddress">
+      <input type="text" placeholder="Россия, г. Москва, ул. Пушкина, д. 137" id="formAddress" required>
     </div>  
   </div>
 
   <a class="button success" ng-click="data.addData()" >Отправить данные</a>
 
 </form>
-<a class="close-reveal-modal">&#215;</a>
+<a id="close-form" class="close-reveal-modal">&#215;</a>

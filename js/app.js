@@ -40,7 +40,7 @@
           newAddress = document.getElementById('formAddress').value;
 
       nameId = localStorage.nameId || 1;      
-      addressId = localStorage.addressId || 10000;
+      addressId = localStorage.addressId || 1;
 
       if (typeof localStorage.hiddenRecords !== 'undefined') {
         hiddenRecords = JSON.parse(localStorage.hiddenRecords);
@@ -70,6 +70,11 @@
       localStorage.nameId = ++nameId;
       localStorage.addressId = ++addressId;
       console.log(hiddenRecords.length);
+
+      $('#close-form').trigger( "click" );
+      alert(2);
+      document.getElementById("add-form").reset();
+      alert(1);
     };
   });
 
