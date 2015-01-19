@@ -71,10 +71,9 @@
       localStorage.addressId = ++addressId;
       console.log(hiddenRecords.length);
 
-      $('#close-form').trigger( "click" );
-      alert(2);
       document.getElementById("add-form").reset();
-      alert(1);
+      $('#close-form').trigger( "click" );
+      $('#load-data').trigger( "click" );
     };
   });
 
